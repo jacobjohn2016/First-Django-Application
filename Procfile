@@ -1,2 +1,1 @@
-python helloapp/manage.py migrate
-python helloapp/manage.py runserver
+web: python manage.py runserver 0.0.0.0:$PORT --noreload
