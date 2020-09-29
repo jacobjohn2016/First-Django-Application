@@ -20,6 +20,6 @@ from howdy import urls as howdyurls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(howdyurls)),
-    path('about/',include(howdyurls))
+    path('', include(howdyurls)),
+    path('about/', include(howdyurls))
 ]
