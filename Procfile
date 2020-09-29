@@ -1,1 +1,1 @@
-python hello/helloapp/manage.py runserver
+web: gunicorn helloapp.wsgi
