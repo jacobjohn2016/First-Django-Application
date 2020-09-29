@@ -15,11 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include
+from django.conf.urls import include, url
 from howdy import urls as howdyurls
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include(howdyurls)),
-    path('about/',include(howdyurls))
+    path('', include(howdyurls)),
+    path('about/', include(howdyurls))
 ]
+
+if not settings.DEBUG:
+    urlpatterns += url('',
+                       (r'^static/(?P<path>.*)$', 'django.views.static.serve',
+                        {'document_root': settings.STATIC_ROOT}),
+                       )
