@@ -1,1 +1,1 @@
-web: gunicorn hellapp.wsgi
+web: gunicorn hellapp.wsgi --log-file -
