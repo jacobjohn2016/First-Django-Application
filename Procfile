@@ -1,3 +1,2 @@
-web: gunicorn hellapp.wsgi --log-file - --log-level debug
-python manage.py collectstatic --noinput
-manage.py migrate
+python helloapp/manage.py migrate
+python helloapp/manage.py runserver
