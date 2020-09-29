@@ -1,0 +1,1 @@
+python hello/helloapp/manage.py runserver
